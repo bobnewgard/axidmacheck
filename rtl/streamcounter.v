@@ -58,7 +58,9 @@ module	streamcounter #(
 		parameter	C_AXI_ADDR_WIDTH = 4,
 		localparam	C_AXI_DATA_WIDTH = 32,
 		parameter	C_AXIS_DATA_WIDTH = 32,
+`ifdef	FORMAL
 		parameter [0:0]	OPT_SKIDBUFFER = 1'b1,
+`endif
 		parameter [0:0]	OPT_LOWPOWER = 0,
 		localparam	ADDRLSB = $clog2(C_AXI_DATA_WIDTH)-3
 		// }}}
